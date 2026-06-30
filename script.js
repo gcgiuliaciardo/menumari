@@ -223,8 +223,8 @@ const menuData = [
 let currentLang = 'it';
 
 const i18n = {
-    it: { subtitle: "Scopri le nostre proposte", all: "Tutto", footer: "I prezzi possono variare. Chiedi al personale per allergeni e intolleranze.", langBtn: "EN" },
-    en: { subtitle: "Discover our menu", all: "All", footer: "Prices may vary. Ask staff about allergens and intolerances.", langBtn: "IT" }
+    it: { subtitle: "Scopri le nostre proposte", all: "Tutto", footer: "I prezzi possono variare. Chiedi al personale per allergeni e intolleranze.", langBtn: "EN", banner: "Non si effettua servizio al tavolo" },
+    en: { subtitle: "Discover our menu", all: "All", footer: "Prices may vary. Ask staff about allergens and intolerances.", langBtn: "IT", banner: "No table service available" }
 };
 
 // Formatta il prezzo
@@ -325,6 +325,7 @@ function handleCategoryFilter() {
 function updateStaticTexts() {
     const t = i18n[currentLang];
     document.querySelector('.subtitle').textContent = t.subtitle;
+    document.querySelector('.info-banner-text').textContent = t.banner;
     document.querySelector('.nav-btn[data-category="all"]').textContent = t.all;
     document.querySelector('.footer p').textContent = t.footer;
     const langBtn = document.querySelector('.lang-toggle');
