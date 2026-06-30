@@ -32,6 +32,28 @@ body {
     color: white;
     text-align: center;
     padding: 3rem 1.5rem;
+    position: relative;
+}
+
+.lang-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.lang-toggle:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: white;
 }
 
 .header h1 {
@@ -194,9 +216,16 @@ body {
 /* Responsive */
 @media (max-width: 600px) {
     .header {
-        padding: 2rem 1rem;
+        padding: 2.5rem 1rem 2rem;
     }
-    
+
+    .lang-toggle {
+        top: 0.75rem;
+        right: 0.75rem;
+        padding: 0.35rem 0.75rem;
+        font-size: 0.75rem;
+    }
+
     .items-grid {
         grid-template-columns: 1fr;
     }
